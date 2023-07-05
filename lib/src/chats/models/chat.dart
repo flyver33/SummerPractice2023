@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math' as math;
 
 @immutable
 class Chat {
@@ -7,6 +8,7 @@ class Chat {
   final DateTime? date;
   final String? userAvatar;
   final int countUnreadMessages;
+  final Color? userColor;
 
   const Chat({
     required this.userName,
@@ -14,6 +16,7 @@ class Chat {
     this.date,
     this.userAvatar,
     this.countUnreadMessages = 0,
+    this.userColor,
   });
 
   factory Chat.fromJson(Map<String, dynamic> map) {
@@ -27,6 +30,7 @@ class Chat {
           ? 'assets/avatars/${map['userAvatar']}'
           : null,
       countUnreadMessages: map['countUnreadMessages']?.toInt() ?? 0,
+      userColor: Colors.primaries[math.Random().nextInt(Colors.primaries.length)],
     );
   }
 }

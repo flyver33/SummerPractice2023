@@ -14,9 +14,13 @@ void main() async {
 
 Future<List<Chat>> _loadChatList() async {
   final result = <Chat>[];
-  final rawData =
+  var rawData =
       jsonDecode(await rootBundle.loadString('assets/data/bootcamp.json'));
-  for (final item in rawData['data']) {
+  var dataList = rawData['data'];
+  dataList.removeWhere((item) => item['lastMessage'] == null);
+  dataList.sort((a, b) => DateTime.fromMillisecondsSinceEpoch(b['date'])
+      .compareTo(DateTime.fromMillisecondsSinceEpoch(a['date'])));
+  for (final item in dataList) {
     result.add(Chat.fromJson(item));
   }
   return result;

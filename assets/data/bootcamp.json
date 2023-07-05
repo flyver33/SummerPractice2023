@@ -9,9 +9,16 @@
             "countUnreadMessages": 1
         },
         {
+            "userName": "Группаш",
+            "lastMessage": "Ну чё там по домашке",
+            "date": 1688450599000,
+            "userAvatar": "13.jpg",
+            "countUnreadMessages": 1
+        },
+        {
             "userName": "Елена",
             "lastMessage": "Слушай, а где ты flutter учишь?",
-            "date": 1675156380000,
+            "date": 1688364199000,
             "userAvatar": null,
             "countUnreadMessages": 5
         },
@@ -97,7 +104,7 @@
             "lastMessage": "А я думал мы друзья....",
             "date": 1675316160000,
             "userAvatar": "11.jpg",
-            "countUnreadMessages": 10
+            "countUnreadMessages": 0
         },
         {
             "userName": "Яна",
